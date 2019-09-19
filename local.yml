@@ -1,11 +1,6 @@
 - hosts: localhost
   become: true
   tasks:  
-  - name: install gnome tweek tool
-    dnf:
-      name: gnome-tweek-tool
-      state: latest
-
   - name: install 
     dnf:
       name: 'https://download.opensuse.org/repositories/home:/lupinix-indi:/fedora-bleeding/Fedora_29/noarch/lupinix-indi-bleeding-1.0-218.5.noarch.rpm'
