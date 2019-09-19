@@ -1,8 +1,45 @@
 - hosts: localhost
   become: true
   tasks: 
+  - name: install gnome shell extensions
+    dnf:
+      name: gnome-shell-extensions
+      state: latest
+  
+  - name: install gnome tweek tool
+    dnf:
+      name: gnome-tweek-tool
+      state: latest
+
+  - name: install 
+    dnf:
+      name: 'https://download.opensuse.org/repositories/home:/lupinix-indi:/fedora-bleeding/Fedora_29/noarch/lupinix-indi-bleeding-1.0-218.5.noarch.rpm'
+      state: present
+      
+  - name: install darktable
+    dnf:
+      name: darktable
+      state: latest
+  
+  - name: install vlc
+    dnf:
+      name: vlc
+      state: latest
+
+  - name: install darktable
+    dnf:
+      name: darktable
+      state: latest
+
+  - name: install gimp
+    dnf:
+      name: gimp
+      state: latest
+
   - name: upgrade all packages
     dnf:
       name: "*"
       state: latest
+  
+  
 
