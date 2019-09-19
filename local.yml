@@ -1,11 +1,6 @@
 - hosts: localhost
   become: true
-  tasks: 
-  - name: install gnome shell extensions
-    dnf:
-      name: gnome-shell-extensions
-      state: latest
-  
+  tasks:  
   - name: install gnome tweek tool
     dnf:
       name: gnome-tweek-tool
