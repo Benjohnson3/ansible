@@ -1,40 +1,13 @@
 - hosts: localhost
   become: true
-  tasks:  
-  - name: install lupinix repo
-    dnf:
-      name: 'https://download.opensuse.org/repositories/home:/lupinix-indi:/fedora-bleeding/Fedora_29/noarch/lupinix-indi-bleeding-1.0-218.5.noarch.rpm'
-      state: present
-      
-  - name: install indi bleeding
-    dnf:
-      name: "indi-*-bleeding"
-      state: latest
-  
-  - name: install darktable
-    dnf:
-      name: darktable
-      state: latest
-  
-  - name: install vlc
-    dnf:
-      name: vlc
-      state: latest
+  pre_tasks:
+    - name: update repositories
+      dnf: update_cache=yes
+      changed_when: False
 
-  - name: install darktable
-    dnf:
-      name: darktable
-      state: latest
+  tasks:
+    - include: tasks/packages.yml
 
-  - name: install gimp
-    dnf:
-      name: gimp
-      state: latest
-
-  - name: upgrade all packages
-    dnf:
-      name: "*"
-      state: latest
   
   
 
