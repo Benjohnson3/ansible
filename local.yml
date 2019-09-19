@@ -3,3 +3,10 @@
   tasks: 
   - name: Install htop 
     dnf: name=htop
+
+  - name: Install mc
+    dnf: name=mc
+
+  - name: Install tmux
+    dnf: name=tmux
+    
