@@ -1,28 +1,3 @@
-# - name: install lupinix repo
-#    dnf:
-#      name: 'https://download.opensuse.org/repositories/home:/lupinix-indi:/fedora-bleeding/Fedora_30/noarch/lupinix-indi-bleeding-1.0-218.6.noarch.rpm'
-#      state: present
-      
-#  - name: install indi bleeding
-#    dnf:
-#      name: "indi-*-bleeding"
-#      state: latest
-  
-#  - name: install indi atik
-#    dnf:
-#      name: indi-atik
-#      state: latest
-  
-#  - name: install kstars bleeding
-#    dnf:
-#      name: kstars-bleeding
-#      state: latest
-
- # - name: install phd2
- #   dnf:
- #     name: phd2
- #     state: latest
-  
   - name: install darktable
     dnf:
       name: darktable
