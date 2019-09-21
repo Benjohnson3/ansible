@@ -1,26 +1,10 @@
-  - name: install darktable
+  - name: install software
     dnf:
-      name: darktable
-      state: latest
-  
-  - name: install vlc
-    dnf:
-      name: vlc
-      state: latest
-
-  - name: install darktable
-    dnf:
-      name: darktable
-      state: latest
-
-  - name: install gimp
-    dnf:
-      name: gimp
-      state: latest
-
-  - name: upgrade all packages
-    dnf:
-      name: "*"
+      name: 
+        - darktable
+        - vlc
+        - gimp
+        -  "*"
       state: latest
   
   
