@@ -1,5 +1,5 @@
-- name: Install python2-psutil package
-  dnf: name=python2-psutil
+- name: Install python3-psutil package
+  dnf: name=python3-psutil
 
 - name: Copy wallpaper file
   copy: src=files/wallpaper.jpg dest=/home/bejohnson/.wallpaper.jpg owner=bejohnson group=bejohnson mode=600
