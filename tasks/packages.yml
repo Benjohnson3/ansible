@@ -4,7 +4,13 @@
         - darktable
         - vlc
         - gimp
+        - snapd
       state: latest
+      
+    snap: 
+      name:
+        - code
+      classic: yes
   
   
 

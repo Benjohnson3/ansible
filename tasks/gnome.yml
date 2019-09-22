@@ -21,3 +21,10 @@
 - name: Set GTK theme
   become_user: bejohnson
   dconf: key="/org/gnome/desktop/interface/gtk-theme" value="'Arc-Dark'"
+
+- name: Install papirus-icon theme
+  dnf: name=papirus-icon-theme
+
+- name: Set GTK theme
+  become_user: bejohnson
+  dconf: key="/org/gnome/desktop/interface/icon-theme" value="'Papirus-Light'"
