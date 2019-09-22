@@ -2,7 +2,6 @@
     dnf:
       name: 
         - darktable
-        - vlc
         - gimp
         - snapd
       state: latest
