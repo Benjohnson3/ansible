@@ -16,6 +16,8 @@
     snap: 
       name: code
       classic: yes
+      become: yes
+      become_method: sudo
   
   
 
