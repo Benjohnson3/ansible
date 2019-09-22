@@ -7,6 +7,7 @@
         - snapd
       state: latest
       
+  - name: Install snap software   
     snap: 
       name:
         - code
