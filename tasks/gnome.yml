@@ -18,3 +18,6 @@
 - name: Install arc theme
   dnf: name=arc-theme
 
+- name: Set GTK theme
+  become_user: bejohnson
+  dconf: key="/org/gnome/desktop/interface/gtk-theme" value="'Arc-Dark'"
