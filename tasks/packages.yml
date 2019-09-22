@@ -13,11 +13,7 @@
       state: started
 
   - name: Install snap software   
-    snap: 
-      name: code
-      classic: yes
-      become: yes
-      become_method: sudo
+    command: snap install code --classic
   
   
 
