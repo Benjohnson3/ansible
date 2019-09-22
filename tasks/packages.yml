@@ -8,9 +8,10 @@
       state: latest
 
   - name: start snapd 
-    service: snapd  
-    state: started
-    
+    service: 
+      name: snapd  
+      state: started
+
   - name: Install snap software   
     snap: 
       name: code
