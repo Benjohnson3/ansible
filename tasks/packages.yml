@@ -12,6 +12,9 @@
       name: snapd  
       state: started
 
+  - name: add snap symlink 
+    command: ln -s /var/lib/snapd/snap /snap
+
   - name: Install snap software   
     command: snap install code --classic
   
