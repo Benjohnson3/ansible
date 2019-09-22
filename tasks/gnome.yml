@@ -28,3 +28,7 @@
 - name: Set GTK theme
   become_user: bejohnson
   dconf: key="/org/gnome/desktop/interface/icon-theme" value="'Papirus-Light'"
+
+- name: Sset clock format
+  become_user: bejohnson
+  dconf: key="/org/gnome/desktop/interface/clock-format" value="'12h'"
