@@ -6,11 +6,14 @@
         - gimp
         - snapd
       state: latest
-      
+
+  - name: start snapd 
+    service: snapd  
+    state: started
+    
   - name: Install snap software   
     snap: 
-      name:
-        - code
+      name: code
       classic: yes
   
   
