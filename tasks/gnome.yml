@@ -29,6 +29,14 @@
   become_user: bejohnson
   dconf: key="/org/gnome/desktop/interface/icon-theme" value="'Papirus-Light'"
 
-- name: Sset clock format
+- name: Set clock format
   become_user: bejohnson
   dconf: key="/org/gnome/desktop/interface/clock-format" value="'12h'"
+
+- name: Set clock format
+  become_user: bejohnson
+  dconf: key="/org/gnome/desktop/interface/clock-show-weekday" value="'True'"
+
+- name: Set clock format
+  become_user: bejohnson
+  dconf: key="/org/gnome/desktop/interface/clock-show-date" value="'False'"
