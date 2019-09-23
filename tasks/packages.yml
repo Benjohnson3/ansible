@@ -1,26 +1,52 @@
-  - name: install software
+ - name: install lupinix repo
     dnf:
-      name: 
-        - darktable
-        - gimp
-        - snapd
+      name: 'https://download.opensuse.org/repositories/home:/lupinix-indi:/fedora-bleeding/Fedora_30/noarch/lupinix-indi-bleeding-1.0-218.6.noarch.rpm'
+      state: present
+      
+#  - name: install indi bleeding
+#    dnf:
+#      name: "indi-*-bleeding"
+#      state: latest
+  
+#  - name: install indi atik
+#    dnf:
+#      name: indi-atik
+#      state: latest
+  
+#  - name: install kstars bleeding
+#    dnf:
+#      name: kstars-bleeding
+#      state: latest
+
+ # - name: install phd2
+ #   dnf:
+ #     name: phd2
+ #     state: latest
+  
+  - name: install darktable
+    dnf:
+      name: darktable
+      state: latest
+  
+  - name: install vlc
+    dnf:
+      name: vlc
       state: latest
 
-  - name: start snapd 
-    service: 
-      name: snapd  
-      state: started
+  - name: install darktable
+    dnf:
+      name: darktable
+      state: latest
 
-  - name: add snap symlink 
-    file:
-      src: /var/lib/snapd/snap
-      dest: /snap
-      owner: root
-      group: root
-      state: link
+  - name: install gimp
+    dnf:
+      name: gimp
+      state: latest
 
-  - name: Install snap software   
-    command: snap install code --classic
+  - name: upgrade all packages
+    dnf:
+      name: "*"
+      state: latest
   
   
 
