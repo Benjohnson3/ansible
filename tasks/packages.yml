@@ -5,8 +5,12 @@
       - darktable
       - vlc
       - gimp
-      - "*"
     state: present
+
+  dnf:   
+    name: "*"
+    state: latest
+
     
   
 
