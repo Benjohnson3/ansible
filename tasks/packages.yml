@@ -1,32 +1,12 @@
  - name: install lupinix repo
     dnf:
-      name: 'https://download.opensuse.org/repositories/home:/lupinix-indi:/fedora-bleeding/Fedora_30/noarch/lupinix-indi-bleeding-1.0-218.7.noarch.rpm'
+      name: 
+        - 'https://download.opensuse.org/repositories/home:/lupinix-indi:/fedora-bleeding/Fedora_30/noarch/lupinix-indi-bleeding-1.0-218.7.noarch.rpm'
+        - darktable
+        - vlc
+        - gimp
+        - "*"
       state: present
     
-  - name: install darktable
-    dnf:
-      name: darktable
-      state: latest
-  
-  - name: install vlc
-    dnf:
-      name: vlc
-      state: latest
-
-  - name: install darktable
-    dnf:
-      name: darktable
-      state: latest
-
-  - name: install gimp
-    dnf:
-      name: gimp
-      state: latest
-
-  - name: upgrade all packages
-    dnf:
-      name: "*"
-      state: latest
-  
   
 
