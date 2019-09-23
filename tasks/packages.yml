@@ -10,8 +10,7 @@
       - kstars-bleeding
       - phd2
     state: present
-
-  dnf:   
+    
     name: "*"
     state: latest
 
