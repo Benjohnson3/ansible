@@ -1,6 +1,6 @@
  - name: install lupinix repo
     dnf:
-      name: 'https://download.opensuse.org/repositories/home:/lupinix-indi:/fedora-bleeding/Fedora_30/noarch/lupinix-indi-bleeding-1.0-218.6.noarch.rpm'
+      name: 'https://download.opensuse.org/repositories/home:/lupinix-indi:/fedora-bleeding/Fedora_30/noarch/lupinix-indi-bleeding-1.0-218.7.noarch.rpm'
       state: present
       
 #  - name: install indi bleeding
