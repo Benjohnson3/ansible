@@ -5,6 +5,10 @@
       - darktable
       - vlc
       - gimp
+      - "indi-*-bleeding"
+      - indi-atik
+      - kstars-bleeding
+      - phd2
     state: present
 
   dnf:   
