@@ -9,8 +9,9 @@
       - indi-atik
       - kstars-bleeding
       - phd2
+      - nano
     state: present
-    
+
     name: "*"
     state: latest
 
