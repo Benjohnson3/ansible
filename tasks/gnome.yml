@@ -52,7 +52,7 @@
   become_user: bejohnson
   dconf: 
     key: "/org/gnome/desktop/interface/clock-format"
-    value=: "'12h'"
+    value: "'12h'"
     state: present
 
 - name: Set clock format
