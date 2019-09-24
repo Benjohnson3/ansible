@@ -13,7 +13,7 @@
   become_user: bejohnson
   dconf: 
     key: "/org/gnome/desktop/background/picture-uri"
-    value: "file:///home/bejohnson/.wallpaper.jpg"
+    value: 'file:///home/bejohnson/.wallpaper.jpg'
     state: present
 
 - name: Copy lockscreenfile
@@ -23,7 +23,7 @@
   become_user: bejohnson
   dconf: 
     key: "/org/gnome/desktop/screensaver/picture-uri"
-    value: "file:///home/bejohnson/.lockscreen.jpg"
+    value: "'file:///home/bejohnson/.lockscreen.jpg'"
     state: present
 
 - name: Install arc theme
@@ -34,7 +34,7 @@
   become_user: bejohnson
   dconf: 
     key: "/org/gnome/desktop/interface/gtk-theme" 
-    value: "Arc-Dark"
+    value: "'Arc-Dark'"
     state: present
 
 - name: Install papirus-icon theme
@@ -45,26 +45,26 @@
   become_user: bejohnson
   dconf: 
     key: "/org/gnome/desktop/interface/icon-theme"
-    value: "Papirus-Light"
+    value: "'Papirus-Light'"
     state: present
 
 - name: Set clock format
   become_user: bejohnson
   dconf: 
     key: "/org/gnome/desktop/interface/clock-format"
-    value=: "12h"
+    value=: "'12h'"
     state: present
 
 - name: Set clock format
   become_user: bejohnson
   dconf: 
     key: "/org/gnome/desktop/interface/clock-show-weekday"
-    value: "True"
+    value: "'True'"
     state: present
 
 - name: Set clock format
   become_user: bejohnson
   dconf: 
     key: "/org/gnome/desktop/interface/clock-show-date"
-    value: "False"
+    value: "'False'"
     state: present
