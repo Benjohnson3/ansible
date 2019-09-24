@@ -2,6 +2,6 @@
   cron: 
     name: ansible provision
     user: ansible  
-    minute: 10
+    minute: '10'
     job: "/usr/bin/ansible-pull -o -U https://github.com/benjohnson3/ansible.git > /dev/null"
 

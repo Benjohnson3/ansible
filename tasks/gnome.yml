@@ -7,7 +7,7 @@
     dest: /home/bejohnson/.wallpaper.jpg 
     owner: bejohnson 
     group: bejohnson 
-    mode: 644
+    mode: 0644
 
 - name: Set GNOME Wallpaper
   become_user: bejohnson
@@ -22,7 +22,7 @@
     dest: /home/bejohnson/.lockscreen.jpg
     owner: bejohnson 
     group: bejohnson 
-    mode: 644
+    mode: 0644
 
 - name: Set lock screen background
   become_user: bejohnson
