@@ -17,9 +17,9 @@
     autoremove: yes
 
 - name: start snapd 
-    service: 
-      name: snapd  
-      state: started
+  service: 
+    name: snapd  
+    state: started
 
 - name: add snap symlink 
     file:
