@@ -16,6 +16,13 @@
     value: "'file:///home/bejohnson/.wallpaper.jpg'"
     state: present
 
+- name: Change ownership of background file
+  file:
+    path: /home/bejohnson/.wallpaper.jpg
+    owner: bejohnson
+    group: bejohnson
+    mode: '0644'
+
 - name: Copy lockscreenfile
   copy: src=files/lockscreen.jpg dest=/home/bejohnson/.lockscreen.jpg owner=bejohnson group=bejohnson mode=600
 
