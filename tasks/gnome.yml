@@ -12,7 +12,7 @@
 - name: Set GNOME Wallpaper
   become_user: bejohnson
   dconf: 
-    key: "/org/gnome/desktop/background/picture-uri"
+    key: "/org/gnome/desktop/background/picture-uri/"
     value: "file:///home/bejohnson/.wallpaper.jpg"
     state: present
 
