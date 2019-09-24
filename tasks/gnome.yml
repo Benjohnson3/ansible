@@ -1,44 +1,70 @@
-user_name: bejohnson
-
 - name: Install python3-psutil package
   dnf: name=python3-psutil
 
 - name: Copy wallpaper file
-  copy: src=files/wallpaper.jpg dest=/home/{{ user_name }}/.wallpaper.jpg owner={{ user_name }} group={{ user_name }} mode=600
+  copy: 
+    src: files/wallpaper.jpg 
+    dest: /home/bejohnson/.wallpaper.jpg 
+    owner: bejohnson 
+    group: bejohnson 
+    mode: 600
 
 - name: Set GNOME Wallpaper
-  become_user: {{ user_name }}
-  dconf: key="/org/gnome/desktop/background/picture-uri" value="'file:///home/{{ user_name }}/.wallpaper.jpg'"
+  become_user: bejohnson
+  dconf: 
+    key: "/org/gnome/desktop/background/picture-uri"
+    value: "file:///home/bejohnson/.wallpaper.jpg"
+    state: present
 
 - name: Copy lockscreenfile
-  copy: src=files/lockscreen.jpg dest=/home/{{ user_name }}/.lockscreen.jpg owner={{ user_name }} group={{ user_name }} mode=600
+  copy: src=files/lockscreen.jpg dest=/home/bejohnson/.lockscreen.jpg owner=bejohnson group=bejohnson mode=600
 
 - name: Set lock screen background
-  become_user: {{ user_name }}
-  dconf: key="/org/gnome/desktop/screensaver/picture-uri" value="'file:///home/{{ user_name }}/.lockscreen.jpg'"
+  become_user: bejohnson
+  dconf: 
+    key: "/org/gnome/desktop/screensaver/picture-uri"
+    value: "file:///home/bejohnson/.lockscreen.jpg"
+    state: present
 
 - name: Install arc theme
-  dnf: name=arc-theme
+  dnf: 
+    name: arc-theme
 
 - name: Set GTK theme
-  become_user: {{ user_name }}
-  dconf: key="/org/gnome/desktop/interface/gtk-theme" value="'Arc-Dark'"
+  become_user: bejohnson
+  dconf: 
+    key: "/org/gnome/desktop/interface/gtk-theme" 
+    value: "Arc-Dark"
+    state: present
 
 - name: Install papirus-icon theme
-  dnf: name=papirus-icon-theme
+  dnf: 
+    name: papirus-icon-theme
 
 - name: Set GTK theme
-  become_user: {{ user_name }}
-  dconf: key="/org/gnome/desktop/interface/icon-theme" value="'Papirus-Light'"
+  become_user: bejohnson
+  dconf: 
+    key: "/org/gnome/desktop/interface/icon-theme"
+    value: "Papirus-Light"
+    state: present
 
 - name: Set clock format
-  become_user: {{ user_name }}
-  dconf: key="/org/gnome/desktop/interface/clock-format" value="'12h'"
+  become_user: bejohnson
+  dconf: 
+    key: "/org/gnome/desktop/interface/clock-format"
+    value=: "12h"
+    state: present
 
-- name: Set clock day format on
-  become_user: {{ user_name }}
-  dconf: key="/org/gnome/desktop/interface/clock-show-weekday" value="'True'"
+- name: Set clock format
+  become_user: bejohnson
+  dconf: 
+    key: "/org/gnome/desktop/interface/clock-show-weekday"
+    value: "True"
+    state: present
 
-- name: Set clock show date off
-  become_user: {{ user_name }}
-  dconf: key="/org/gnome/desktop/interface/clock-show-date" value="'False'"
+- name: Set clock format
+  become_user: bejohnson
+  dconf: 
+    key: "/org/gnome/desktop/interface/clock-show-date"
+    value: "False"
+    state: present
