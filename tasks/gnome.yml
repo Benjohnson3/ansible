@@ -13,7 +13,7 @@
   become_user: bejohnson
   dconf: 
     key: "/org/gnome/desktop/background/picture-uri"
-    value: 'file:///home/bejohnson/.wallpaper.jpg'
+    value: "'file:///home/bejohnson/.wallpaper.jpg'"
     state: present
 
 - name: Copy lockscreenfile
@@ -23,7 +23,7 @@
   become_user: bejohnson
   dconf: 
     key: "/org/gnome/desktop/screensaver/picture-uri"
-    value: 'file:///home/bejohnson/.lockscreen.jpg'
+    value: "'file:///home/bejohnson/.lockscreen.jpg'"
     state: present
 
 - name: Install arc theme
