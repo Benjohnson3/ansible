@@ -1,0 +1,11 @@
+- name: install lupinix repo 
+  copy: 
+    src: files/lupinix-indi-bleeding.repo
+    dest: /etc/yum.repo.d
+    owner: root 
+    group: root 
+    mode: 0644
+
+- name: configure lupinix repo
+  become: yes
+  command: dnf config-manager --add-repo /etc/yum.repos.d/lupinix-indi-bleeding.repo

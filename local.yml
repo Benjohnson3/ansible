@@ -6,6 +6,7 @@
       changed_when: False
 
   tasks:
+    - include: tasks/repository.yml
     - include: tasks/users.yml
     - include: tasks/packages.yml
     - include: tasks/cron.yml

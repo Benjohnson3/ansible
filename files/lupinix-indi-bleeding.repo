@@ -1,0 +1,7 @@
+[lupinix-indi-bleeding]
+name=INDI and KStars for Fedora - Bleeding Edge
+type=rpm-md
+baseurl=http://download.opensuse.org/repositories/home:/lupinix-indi:/fedora-bleeding/Fedora_$releasever/
+gpgcheck=1
+gpgkey=http://download.opensuse.org/repositories/home:/lupinix-indi:/fedora-bleeding/Fedora_$releasever/repodata/repomd.xml.key
+enabled=1
