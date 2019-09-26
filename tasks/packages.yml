@@ -4,13 +4,11 @@
       - darktable
       - gimp
       - snapd
-      - indi-atik
-      - kstars-bleeding
       - phd2
       - nano
     state: latest
 
-- name: instll indi (allow erasing)
+- name: install indi (allow erasing)
   become: yes
   command: dnf -allowerasing -y install indi-*-bleeding
 
