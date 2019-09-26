@@ -17,7 +17,12 @@
     autoremove: yes
 
 - name: start snapd 
-  service: 
+  systemd: 
+    name: snapd  
+    state: reloaded
+
+- name: start snapd 
+  systemd: 
     name: snapd  
     state: started
 
