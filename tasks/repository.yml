@@ -2,7 +2,7 @@
   become: yes
   copy: 
     src: files/lupinix-indi-bleeding.repo
-    dest: /etc/yum.repo.d
+    dest: /etc/yum.repo.d/
     owner: root 
     group: root 
     mode: 0644
