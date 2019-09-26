@@ -1,16 +1,18 @@
+- name: install indi (allow erasing)
+  become: yes
+  command: dnf --allowerasing -y install indi-*-bleeding
+  
 - name: install packages
   dnf:
     name: 
       - darktable
       - gimp
       - snapd
+      - indi-atik
+      - kstars-bleeding
       - phd2
       - nano
     state: latest
-
-- name: install indi (allow erasing)
-  become: yes
-  command: dnf --allowerasing -y install indi-*-bleeding
 
 - name: Autoremove unneeded packages installed as dependencies
   dnf:
