@@ -8,5 +8,8 @@
     mode: 0644
 
 - name: configure lupinix repo
-  become: yes
-  command: dnf config-manager --add-repo /etc/yum.repos.d/lupinix-indi-bleeding.repo
+  dnf:
+    enablerepo: lupinix-indi-bleeding
+    state: present
+
+  #command: dnf config-manager --add-repo /etc/yum.repos.d/lupinix-indi-bleeding.repo

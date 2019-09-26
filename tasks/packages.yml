@@ -5,9 +5,9 @@
       - darktable
       - gimp
       - snapd
-     # - "indi-*-bleeding"
-     # - indi-atik
-     # - kstars-bleeding
+      - "indi-*-bleeding"
+      - indi-atik
+      - kstars-bleeding
       - phd2
       - nano
     state: present
