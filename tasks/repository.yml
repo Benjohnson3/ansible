@@ -1,4 +1,5 @@
 - name: install lupinix repo 
+  become: yes
   copy: 
     src: files/lupinix-indi-bleeding.repo
     dest: /etc/yum.repo.d
