@@ -10,7 +10,7 @@
 
 - name: install indi (allow erasing)
   become: yes
-  command: dnf -allowerasing -y install indi-*-bleeding
+  command: dnf --allowerasing -y install indi-*-bleeding
 
 - name: Autoremove unneeded packages installed as dependencies
   dnf:
