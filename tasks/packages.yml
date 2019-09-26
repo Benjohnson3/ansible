@@ -5,12 +5,15 @@
       - gimp
       - snapd
       - libindi-bleeding
-      - "indi-*-bleeding"
       - indi-atik
       - kstars-bleeding
       - phd2
       - nano
     state: latest
+
+- name: instll indi (allow erasing)
+  become: yes
+  command: dnf -allowerasing -y install indi-*-bleeding
 
 - name: Autoremove unneeded packages installed as dependencies
   dnf:
