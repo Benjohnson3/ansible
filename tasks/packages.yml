@@ -4,7 +4,6 @@
       - darktable
       - gimp
       - snapd
-      - libindi-bleeding
       - indi-atik
       - kstars-bleeding
       - phd2
