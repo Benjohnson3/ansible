@@ -10,13 +10,13 @@
       - kstars-bleeding
       - phd2
       - nano
-    state: present
+    state: latest
 
 - name: Autoremove unneeded packages installed as dependencies
   dnf:
     autoremove: yes
 
-- name: start snapd 
+- name: reload snapd 
   systemd: 
     name: snapd  
     state: reloaded
